@@ -22,6 +22,22 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		bool IsAlly;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		AActor* TargetActor;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		int Attack;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		int Defense;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		int MovementSpeed;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		int AttackSpeed;
+
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
