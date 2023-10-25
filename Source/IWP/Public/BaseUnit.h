@@ -37,7 +37,6 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		int AttackSpeed;
 
-
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
