@@ -10,8 +10,18 @@
  * 
  */
 UCLASS()
-class IWP_API ABasicEnemy : public ABaseUnit
+class IWP_API ABasicEnemy : public ABaseUnit//, public IGameplayTagAssetInterface
 {
 	GENERATED_BODY()
 	
+public:
+	ABasicEnemy();
+
+protected:
+	//Tags
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Gameplay Tags")
+	//	FGameplayTagContainer EnemyTags;
+
+private:
+
 };

@@ -1,10 +1,12 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
-
+#include "GameplayTagContainer.h"
+#include "GameplayTagAssetInterface.h"
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "BaseUnit.generated.h"
+
 
 UCLASS()
 class IWP_API ABaseUnit : public ACharacter
@@ -37,11 +39,14 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		int AttackSpeed;
 
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
 	// Called to bind functionality to input
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+	//virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+	//virtual void GetOwnedGameplayTags(FGameplayTagContainer& TagContainer) const override { TagContainer = EnemyTags; return; };
 
 };
