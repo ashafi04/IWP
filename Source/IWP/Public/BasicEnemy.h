@@ -6,6 +6,16 @@
 #include "BaseUnit.h"
 #include "BasicEnemy.generated.h"
 
+UENUM(BlueprintType)
+enum class EMovementState : uint8 {
+	//VE_Idle       UMETA(DisplayName = "Idle"),
+	//VE_Walk        UMETA(DisplayName = "Walk"),
+	//VE_Attack        UMETA(DisplayName = "Attack"),
+	IDLE,
+	WALK,
+	ATTACK
+};
+
 /**
  * 
  */
@@ -14,6 +24,7 @@ class IWP_API ABasicEnemy : public ABaseUnit//, public IGameplayTagAssetInterfac
 {
 	GENERATED_BODY()
 	
+
 public:
 	ABasicEnemy();
 
@@ -22,6 +33,9 @@ protected:
 	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Gameplay Tags")
 	//	FGameplayTagContainer EnemyTags;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		EMovementState EnemyStateEnum;
 private:
 
 };
+
