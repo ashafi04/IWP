@@ -28,22 +28,26 @@ protected:
 		AActor* TargetActor;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		int Attack;
+		int32 Attack;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		int Defense;
+		int32 Defense;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		int MovementSpeed;
+		int32 MovementSpeed;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		int AttackSpeed;
+		int32 AttackSpeed;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		int32 Health;
 
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	UFUNCTION(BlueprintCallable, Category = "Damage Calculation")
+		void TakeDamage(int32 DamageAmount, AActor* OtherActor);
 	// Called to bind functionality to input
 	//virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 

@@ -23,10 +23,10 @@ void ABaseUnit::Tick(float DeltaTime)
 
 }
 
-//// Called to bind functionality to input
-//void ABaseUnit::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
-//{
-//	Super::SetupPlayerInputComponent(PlayerInputComponent);
-//
-//}
+void ABaseUnit::TakeDamage(int32 DamageAmount, AActor* OtherActor)
+{
+	//Set Health Amount and Destory Projectile
+	Health = DamageAmount - Defense;
+	OtherActor->Destroy();
+}
 

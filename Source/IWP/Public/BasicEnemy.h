@@ -8,9 +8,6 @@
 
 UENUM(BlueprintType)
 enum class EMovementState : uint8 {
-	//VE_Idle       UMETA(DisplayName = "Idle"),
-	//VE_Walk        UMETA(DisplayName = "Walk"),
-	//VE_Attack        UMETA(DisplayName = "Attack"),
 	IDLE,
 	WALK,
 	ATTACK
