@@ -6,12 +6,8 @@
 #include "BaseUnit.h"
 #include "BasicEnemy.generated.h"
 
-UENUM(BlueprintType)
-enum class EMovementState : uint8 {
-	IDLE,
-	WALK,
-	ATTACK
-};
+
+
 
 /**
  * 
@@ -30,8 +26,7 @@ protected:
 	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Gameplay Tags")
 	//	FGameplayTagContainer EnemyTags;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		EMovementState EnemyStateEnum;
+
 private:
 
 };

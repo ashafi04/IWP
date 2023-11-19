@@ -7,6 +7,12 @@
 #include "GameFramework/Character.h"
 #include "BaseUnit.generated.h"
 
+UENUM(BlueprintType)
+enum class EMovementState : uint8 {
+	IDLE,
+	WALK,
+	ATTACK
+};
 
 UCLASS()
 class IWP_API ABaseUnit : public ACharacter
@@ -41,6 +47,9 @@ protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		int32 Health;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		EMovementState MovementStateEnum;
 
 public:	
 	// Called every frame
