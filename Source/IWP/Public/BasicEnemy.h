@@ -22,10 +22,9 @@ public:
 	ABasicEnemy();
 
 protected:
-	//Tags
-	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Gameplay Tags")
-	//	FGameplayTagContainer EnemyTags;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		ABaseUnit* TargetUnit;
 
 private:
 

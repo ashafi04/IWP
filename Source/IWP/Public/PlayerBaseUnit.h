@@ -17,7 +17,8 @@ class IWP_API APlayerBaseUnit : public ABaseUnit
 public:
 	APlayerBaseUnit();
 protected:
-
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		ABaseUnit* TargetUnit;
 private:
 
 };

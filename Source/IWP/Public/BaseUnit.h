@@ -33,6 +33,9 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		AActor* TargetActor;
 
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	//	ABaseUnit* TargetUnit;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		int32 Attack;
 
@@ -56,10 +59,12 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	UFUNCTION(BlueprintCallable, Category = "Damage Calculation")
-		void TakeDamage(int32 DamageAmount, AActor* OtherActor);
+		virtual void TakeDamage(ABaseUnit* OtherUnit);
+
 	// Called to bind functionality to input
 	//virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	//virtual void GetOwnedGameplayTags(FGameplayTagContainer& TagContainer) const override { TagContainer = EnemyTags; return; };
 
 };
+

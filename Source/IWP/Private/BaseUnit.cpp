@@ -23,10 +23,14 @@ void ABaseUnit::Tick(float DeltaTime)
 
 }
 
-void ABaseUnit::TakeDamage(int32 DamageAmount, AActor* OtherActor)
+void ABaseUnit::TakeDamage(ABaseUnit* OtherUnit)
 {
-	//Set Health Amount and Destory Projectile
-	Health = DamageAmount - Defense;
-	OtherActor->Destroy();
+	Health = OtherUnit->Attack - Defense;
 }
+
+//void ABaseUnit::TakeDamage(int32 DamageAmount, ABaseUnit* OtherUnit)
+//{
+//	//Set Health Amount and Destory Projectile
+//	Health = DamageAmount - Defense;
+//} 
 
