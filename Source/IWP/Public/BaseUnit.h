@@ -33,9 +33,6 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		AActor* TargetActor;
 
-	//UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	//	ABaseUnit* TargetUnit;
-
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		int32 Attack;
 
@@ -54,12 +51,22 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		EMovementState MovementStateEnum;
 
+	UPROPERTY(BlueprintReadWrite)
+		float MinDist;
+
+	UPROPERTY(BlueprintReadWrite)
+		float AttackTimer;
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
 	UFUNCTION(BlueprintCallable, Category = "Damage Calculation")
-		virtual void TakeDamage(ABaseUnit* OtherUnit);
+		void TakeDamage(ABaseUnit* OtherUnit);
+
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+		void OnDeath();
+		virtual void OnDeath_Implementation();
 
 	// Called to bind functionality to input
 	//virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
