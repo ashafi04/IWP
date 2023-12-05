@@ -36,6 +36,13 @@ void ABaseUnit::OnDeath_Implementation()
 {
 }
 
+void ABaseUnit::OnAttack_Implementation()
+{
+}
+
+void ABaseUnit::OnWait_Implementation()
+{
+}
 
 //void ABaseUnit::TakeDamage(int32 DamageAmount, ABaseUnit* OtherUnit)
 //{

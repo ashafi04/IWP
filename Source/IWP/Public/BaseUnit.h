@@ -68,6 +68,13 @@ public:
 		void OnDeath();
 		virtual void OnDeath_Implementation();
 
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+		void OnAttack();
+		virtual void OnAttack_Implementation();
+
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+		void OnWait();
+		virtual void OnWait_Implementation();
 	// Called to bind functionality to input
 	//virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
