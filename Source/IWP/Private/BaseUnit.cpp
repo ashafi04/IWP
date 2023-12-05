@@ -22,8 +22,8 @@ void ABaseUnit::BeginPlay()
 void ABaseUnit::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-/*	if (Health <= 0)
-	*/	
+	if (Health <= 0)
+		OnDeath();
 
 }
 
@@ -31,11 +31,6 @@ void ABaseUnit::TakeDamage(ABaseUnit* OtherUnit)
 {
 	Health =  Health - (OtherUnit->Attack - Defense);
 }
-
-//void ABaseUnit::OnDeath()
-//{
-//	//return 0;
-//}
 
 void ABaseUnit::OnDeath_Implementation()
 {
