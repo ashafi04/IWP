@@ -19,6 +19,9 @@ public:
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		ABaseUnit* TargetUnit;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		FString UnitClass;
 private:
 
 };

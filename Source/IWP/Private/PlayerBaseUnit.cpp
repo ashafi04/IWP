@@ -6,4 +6,5 @@
 APlayerBaseUnit::APlayerBaseUnit()
 {
 	IsAlly = true;
+	UnitClass = "Default";
 }

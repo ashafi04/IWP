@@ -8,8 +8,15 @@ ABaseUnit::ABaseUnit()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+
 	TargetActor = nullptr;
 	MinDist = 200;
+	Attack = 10;
+	Defense = 5;
+	MovementSpeed = 1;
+	AttackSpeed = 1;
+	Health= 50;
+	AttackTimer = 10;
 }
 
 // Called when the game starts or when spawned
