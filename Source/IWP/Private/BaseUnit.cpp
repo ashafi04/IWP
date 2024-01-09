@@ -37,7 +37,9 @@ void ABaseUnit::Tick(float DeltaTime)
 void ABaseUnit::TakeDamage(ABaseUnit* OtherUnit)
 {
 	if (OtherUnit->Attack - Defense > 0)
-		Health =  Health - (OtherUnit->Attack - Defense);
+		Health = Health - (OtherUnit->Attack - Defense);
+	else
+		Health--;
 }
 
 void ABaseUnit::OnDeath_Implementation()
@@ -52,9 +54,4 @@ void ABaseUnit::OnWait_Implementation()
 {
 }
 
-//void ABaseUnit::TakeDamage(int32 DamageAmount, ABaseUnit* OtherUnit)
-//{
-//	//Set Health Amount and Destory Projectile
-//	Health = DamageAmount - Defense;
-//} 
 
